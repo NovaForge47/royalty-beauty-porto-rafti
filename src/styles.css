@@ -128,8 +128,6 @@
   text-transform: uppercase;
   transition: all 0.4s ease;
   cursor: pointer;
-}
-@utility btn-gold {
   &:hover {
     background: var(--color-gold);
     color: var(--color-onyx);
@@ -152,8 +150,6 @@
   text-transform: uppercase;
   transition: all 0.4s ease;
   cursor: pointer;
-}
-@utility btn-outline-gold {
   &:hover {
     background: var(--color-gold);
     color: var(--color-onyx);
