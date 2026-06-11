@@ -1,10 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { toast } from "sonner";
-import { Toaster } from "@/components/ui/sonner";
 import heroImg from "@/assets/hero.jpg";
 import aboutImg from "@/assets/about.jpg";
-import servicesImg from "@/assets/services.jpg";
+import { CalendlyEmbed } from "@/components/CalendlyEmbed";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -90,7 +88,6 @@ const REVIEWS = [
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Toaster position="top-center" />
       <Nav />
       <Hero />
       <Marquee />
@@ -323,145 +320,22 @@ function About() {
 }
 
 function Booking() {
-  const [form, setForm] = useState({ name: "", service: "", date: "", time: "", phone: "" });
-  const [loading, setLoading] = useState(false);
-
-  function update<K extends keyof typeof form>(k: K, v: string) {
-    setForm((f) => ({ ...f, [k]: v }));
-  }
-
-  function submit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!form.name.trim() || !form.service || !form.date || !form.time || !form.phone.trim()) {
-      toast.error("Παρακαλώ συμπλήρωσε όλα τα πεδία.");
-      return;
-    }
-    if (!/^[\d\s+()-]{8,20}$/.test(form.phone)) {
-      toast.error("Μη έγκυρος αριθμός τηλεφώνου.");
-      return;
-    }
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      toast.success("Το αίτημα σου στάλθηκε. Θα επικοινωνήσουμε σύντομα για επιβεβαίωση.");
-      setForm({ name: "", service: "", date: "", time: "", phone: "" });
-    }, 700);
-  }
-
   return (
     <section id="booking" className="py-28 lg:py-40 bg-background">
-      <div className="max-w-6xl mx-auto px-6 lg:px-12">
+      <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
           <p className="eyebrow mb-6">— Online Booking</p>
           <h2 className="font-display text-5xl lg:text-7xl font-light leading-[1]">
             Κλείσε το <span className="italic text-gold">ραντεβού</span> σου
           </h2>
           <p className="mt-8 text-muted-foreground max-w-xl mx-auto">
-            Συμπλήρωσε τη φόρμα και η ομάδα μας θα επικοινωνήσει για την επιβεβαίωση εντός της
-            ίδιας ημέρας.
+            Επίλεξε ημέρα και ώρα που σε εξυπηρετεί — η κράτησή σου επιβεβαιώνεται αυτόματα.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          <div className="lg:col-span-5 hidden lg:block">
-            <img
-              src={servicesImg}
-              alt=""
-              loading="lazy"
-              width={1400}
-              height={1200}
-              className="w-full aspect-[3/4] object-cover"
-            />
-          </div>
-          <form
-            onSubmit={submit}
-            className="lg:col-span-7 bg-card border border-border p-8 lg:p-12 space-y-6"
-          >
-            <Field label="Όνομα">
-              <input
-                type="text"
-                value={form.name}
-                onChange={(e) => update("name", e.target.value)}
-                maxLength={80}
-                className="lux-input"
-                placeholder="Το όνομά σου"
-              />
-            </Field>
-            <Field label="Υπηρεσία">
-              <select
-                value={form.service}
-                onChange={(e) => update("service", e.target.value)}
-                className="lux-input"
-              >
-                <option value="">Επίλεξε υπηρεσία</option>
-                {SERVICES.map((s) => (
-                  <option key={s.title} value={s.title}>
-                    {s.title}
-                  </option>
-                ))}
-              </select>
-            </Field>
-            <div className="grid sm:grid-cols-2 gap-6">
-              <Field label="Ημερομηνία">
-                <input
-                  type="date"
-                  value={form.date}
-                  onChange={(e) => update("date", e.target.value)}
-                  className="lux-input"
-                />
-              </Field>
-              <Field label="Ώρα">
-                <input
-                  type="time"
-                  value={form.time}
-                  onChange={(e) => update("time", e.target.value)}
-                  className="lux-input"
-                />
-              </Field>
-            </div>
-            <Field label="Τηλέφωνο">
-              <input
-                type="tel"
-                value={form.phone}
-                onChange={(e) => update("phone", e.target.value)}
-                maxLength={20}
-                className="lux-input"
-                placeholder="69XXXXXXXX"
-              />
-            </Field>
-            <button type="submit" disabled={loading} className="btn-gold w-full mt-4">
-              {loading ? "Αποστολή..." : "Αποστολή Αιτήματος"}
-            </button>
-          </form>
-        </div>
+        <CalendlyEmbed />
       </div>
-      <style>{`
-        .lux-input{
-          width:100%;
-          background:transparent;
-          border:none;
-          border-bottom:1px solid var(--color-border);
-          padding:0.85rem 0;
-          font-family:var(--font-sans);
-          font-size:0.95rem;
-          color:var(--color-foreground);
-          outline:none;
-          transition:border-color .3s;
-        }
-        .lux-input:focus{ border-bottom-color: var(--color-gold); }
-      `}</style>
     </section>
-  );
-}
-
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
-  return (
-    <label className="block">
-      <span className="block text-[0.65rem] tracking-[0.3em] uppercase text-muted-foreground mb-3">
-        {label}
-      </span>
-      {children}
-    </label>
   );
 }
 
