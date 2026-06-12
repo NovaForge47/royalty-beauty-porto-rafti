@@ -77,17 +77,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Royalty Beauty by Ikonomaki" },
+      { name: "description", content: "Boutique κομμωτήριο πολυτελείας στο Πόρτο Ράφτη. Κουρέματα, hair makeover, extensions, makeup & eyelashes." },
+      { property: "og:title", content: "Royalty Beauty by Ikonomaki" },
+      { property: "og:description", content: "Boutique κομμωτήριο πολυτελείας στο Πόρτο Ράφτη. Η πολυτέλεια που σου αξίζει." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/png", href: "/__l5e/assets-v1/cfb0af70-d6c5-46b1-bcfc-8f0f6820e765/logo.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
