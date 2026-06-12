@@ -2,7 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroImg from "@/assets/hero.jpg";
 import aboutImg from "@/assets/about.jpg";
+import logoAsset from "@/assets/logo.png.asset.json";
 import { CalendlyEmbed } from "@/components/CalendlyEmbed";
+
+const INSTAGRAM_URL = "https://www.instagram.com/royaltybeautyandmore/";
+const FACEBOOK_URL = "https://www.facebook.com/Royaltybeautyandmore.gr";
+const ADDRESS = "37ο χλμ Λ. Μαρκοπούλου, Πόρτο Ράφτη";
+const MAPS_QUERY = encodeURIComponent("37ο χλμ Λεωφ. Μαρκοπούλου, Πόρτο Ράφτη");
 
 export const Route = createFileRoute("/")({
   head: () => ({
