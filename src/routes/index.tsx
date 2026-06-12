@@ -466,8 +466,6 @@ function Contact() {
               </div>
               <a
                 href={`https://www.google.com/maps?q=${MAPS_QUERY}`}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="font-display text-2xl leading-snug hover:text-gold transition-colors"
               >
                 {ADDRESS}
@@ -482,20 +480,17 @@ function Contact() {
               <div className="flex gap-6 mt-2">
                 <a
                   href={INSTAGRAM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-ivory hover:text-gold transition-colors text-sm tracking-[0.2em] uppercase border-b border-gold/40 pb-1"
                 >
                   Instagram
                 </a>
                 <a
                   href={FACEBOOK_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-ivory hover:text-gold transition-colors text-sm tracking-[0.2em] uppercase border-b border-gold/40 pb-1"
                 >
                   Facebook
                 </a>
+
               </div>
             </div>
           </div>
@@ -543,8 +538,6 @@ function Footer() {
           </a>
           <a
             href={`https://www.google.com/maps?q=${MAPS_QUERY}`}
-            target="_blank"
-            rel="noopener noreferrer"
             className="block text-ivory/60 mt-2 text-sm hover:text-gold transition-colors"
           >
             {ADDRESS}
@@ -555,20 +548,17 @@ function Footer() {
           <div className="flex flex-col gap-2">
             <a
               href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
               className="text-ivory/80 hover:text-gold transition-colors text-sm"
             >
               Instagram →
             </a>
             <a
               href={FACEBOOK_URL}
-              target="_blank"
-              rel="noopener noreferrer"
               className="text-ivory/80 hover:text-gold transition-colors text-sm"
             >
               Facebook →
             </a>
+
           </div>
         </div>
       </div>
