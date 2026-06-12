@@ -565,7 +565,7 @@ function Footer() {
       <div className="border-t border-ivory/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex flex-col md:flex-row justify-between gap-3 text-[0.7rem] tracking-[0.25em] uppercase text-ivory/50">
           <span>© {new Date().getFullYear()} Royalty Beauty by Ikonomaki</span>
-          <span>Crafted with care · Πόρτο Ράφτη</span>
+          <span>Designed by Nexus Media</span>
         </div>
       </div>
     </footer>
