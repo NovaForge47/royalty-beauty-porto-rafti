@@ -2,7 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroImg from "@/assets/hero.jpg";
 import aboutImg from "@/assets/about.jpg";
+import logoAsset from "@/assets/logo.png.asset.json";
 import { CalendlyEmbed } from "@/components/CalendlyEmbed";
+
+const INSTAGRAM_URL = "https://www.instagram.com/royaltybeautyandmore/";
+const FACEBOOK_URL = "https://www.facebook.com/Royaltybeautyandmore.gr";
+const ADDRESS = "37ο χλμ Λ. Μαρκοπούλου, Πόρτο Ράφτη";
+const MAPS_QUERY = encodeURIComponent("37ο χλμ Λεωφ. Μαρκοπούλου, Πόρτο Ράφτη");
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -107,10 +113,13 @@ function Nav() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-md border-b border-border/60">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-        <a href="#top" className="flex flex-col leading-none">
-          <span className="font-display text-xl tracking-wide">Royalty Beauty</span>
-          <span className="text-[0.6rem] tracking-[0.3em] uppercase text-gold mt-1">
-            by Ikonomaki
+        <a href="#top" className="flex items-center gap-3 leading-none">
+          <img src={logoAsset.url} alt="Royalty Beauty & More" className="h-12 w-12 rounded-full object-cover border border-gold/40" />
+          <span className="flex flex-col">
+            <span className="font-display text-xl tracking-wide">Royalty Beauty</span>
+            <span className="text-[0.6rem] tracking-[0.3em] uppercase text-gold mt-1">
+              by Ikonomaki
+            </span>
           </span>
         </a>
         <nav className="hidden md:flex items-center gap-10">
@@ -455,11 +464,16 @@ function Contact() {
               <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold mb-2">
                 Διεύθυνση
               </div>
-              <p className="font-display text-2xl leading-snug">
-                Πόρτο Ράφτη
+              <a
+                href={`https://www.google.com/maps?q=${MAPS_QUERY}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-display text-2xl leading-snug hover:text-gold transition-colors"
+              >
+                {ADDRESS}
                 <br />
                 Αθήνα, Ελλάδα
-              </p>
+              </a>
             </div>
             <div>
               <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold mb-2">
@@ -467,7 +481,7 @@ function Contact() {
               </div>
               <div className="flex gap-6 mt-2">
                 <a
-                  href="https://instagram.com"
+                  href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-ivory hover:text-gold transition-colors text-sm tracking-[0.2em] uppercase border-b border-gold/40 pb-1"
@@ -475,7 +489,7 @@ function Contact() {
                   Instagram
                 </a>
                 <a
-                  href="https://facebook.com"
+                  href={FACEBOOK_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-ivory hover:text-gold transition-colors text-sm tracking-[0.2em] uppercase border-b border-gold/40 pb-1"
@@ -489,8 +503,8 @@ function Contact() {
 
         <div className="relative aspect-square w-full border border-gold/40 overflow-hidden">
           <iframe
-            title="Royalty Beauty by Ikonomaki — Πόρτο Ράφτη"
-            src="https://www.google.com/maps?q=Porto+Rafti,+Greece&output=embed"
+            title="Royalty Beauty & More — Πόρτο Ράφτη"
+            src={`https://www.google.com/maps?q=${MAPS_QUERY}&output=embed`}
             className="w-full h-full grayscale contrast-125"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -506,9 +520,14 @@ function Footer() {
     <footer className="bg-onyx text-ivory border-t border-gold/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-3 gap-12">
         <div>
-          <div className="font-display text-2xl">Royalty Beauty</div>
-          <div className="text-[0.6rem] tracking-[0.3em] uppercase text-gold mt-1">
-            by Ikonomaki
+          <div className="flex items-center gap-3">
+            <img src={logoAsset.url} alt="Royalty Beauty & More" className="h-12 w-12 rounded-full object-cover border border-gold/40" />
+            <div>
+              <div className="font-display text-2xl">Royalty Beauty</div>
+              <div className="text-[0.6rem] tracking-[0.3em] uppercase text-gold mt-1">
+                by Ikonomaki
+              </div>
+            </div>
           </div>
           <p className="mt-6 text-ivory/60 text-sm leading-relaxed max-w-xs">
             Boutique κομμωτήριο πολυτελείας στο Πόρτο Ράφτη.
@@ -522,13 +541,20 @@ function Footer() {
           >
             22990 74486
           </a>
-          <p className="text-ivory/60 mt-2 text-sm">Πόρτο Ράφτη, Αθήνα</p>
+          <a
+            href={`https://www.google.com/maps?q=${MAPS_QUERY}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-ivory/60 mt-2 text-sm hover:text-gold transition-colors"
+          >
+            {ADDRESS}
+          </a>
         </div>
         <div>
           <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold mb-4">Ακολούθησέ μας</div>
           <div className="flex flex-col gap-2">
             <a
-              href="https://instagram.com"
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-ivory/80 hover:text-gold transition-colors text-sm"
@@ -536,20 +562,12 @@ function Footer() {
               Instagram →
             </a>
             <a
-              href="https://facebook.com"
+              href={FACEBOOK_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-ivory/80 hover:text-gold transition-colors text-sm"
             >
               Facebook →
-            </a>
-            <a
-              href="https://www.tiktok.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-ivory/80 hover:text-gold transition-colors text-sm"
-            >
-              TikTok →
             </a>
           </div>
         </div>
