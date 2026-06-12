@@ -464,11 +464,16 @@ function Contact() {
               <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold mb-2">
                 Διεύθυνση
               </div>
-              <p className="font-display text-2xl leading-snug">
-                Πόρτο Ράφτη
+              <a
+                href={`https://www.google.com/maps?q=${MAPS_QUERY}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-display text-2xl leading-snug hover:text-gold transition-colors"
+              >
+                {ADDRESS}
                 <br />
                 Αθήνα, Ελλάδα
-              </p>
+              </a>
             </div>
             <div>
               <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold mb-2">
@@ -476,7 +481,7 @@ function Contact() {
               </div>
               <div className="flex gap-6 mt-2">
                 <a
-                  href="https://instagram.com"
+                  href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-ivory hover:text-gold transition-colors text-sm tracking-[0.2em] uppercase border-b border-gold/40 pb-1"
@@ -484,7 +489,7 @@ function Contact() {
                   Instagram
                 </a>
                 <a
-                  href="https://facebook.com"
+                  href={FACEBOOK_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-ivory hover:text-gold transition-colors text-sm tracking-[0.2em] uppercase border-b border-gold/40 pb-1"
@@ -498,8 +503,8 @@ function Contact() {
 
         <div className="relative aspect-square w-full border border-gold/40 overflow-hidden">
           <iframe
-            title="Royalty Beauty by Ikonomaki — Πόρτο Ράφτη"
-            src="https://www.google.com/maps?q=Porto+Rafti,+Greece&output=embed"
+            title="Royalty Beauty & More — Πόρτο Ράφτη"
+            src={`https://www.google.com/maps?q=${MAPS_QUERY}&output=embed`}
             className="w-full h-full grayscale contrast-125"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
