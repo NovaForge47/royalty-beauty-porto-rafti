@@ -520,9 +520,14 @@ function Footer() {
     <footer className="bg-onyx text-ivory border-t border-gold/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-3 gap-12">
         <div>
-          <div className="font-display text-2xl">Royalty Beauty</div>
-          <div className="text-[0.6rem] tracking-[0.3em] uppercase text-gold mt-1">
-            by Ikonomaki
+          <div className="flex items-center gap-3">
+            <img src={logoAsset.url} alt="Royalty Beauty & More" className="h-12 w-12 rounded-full object-cover border border-gold/40" />
+            <div>
+              <div className="font-display text-2xl">Royalty Beauty</div>
+              <div className="text-[0.6rem] tracking-[0.3em] uppercase text-gold mt-1">
+                by Ikonomaki
+              </div>
+            </div>
           </div>
           <p className="mt-6 text-ivory/60 text-sm leading-relaxed max-w-xs">
             Boutique κομμωτήριο πολυτελείας στο Πόρτο Ράφτη.
@@ -536,13 +541,20 @@ function Footer() {
           >
             22990 74486
           </a>
-          <p className="text-ivory/60 mt-2 text-sm">Πόρτο Ράφτη, Αθήνα</p>
+          <a
+            href={`https://www.google.com/maps?q=${MAPS_QUERY}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-ivory/60 mt-2 text-sm hover:text-gold transition-colors"
+          >
+            {ADDRESS}
+          </a>
         </div>
         <div>
           <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold mb-4">Ακολούθησέ μας</div>
           <div className="flex flex-col gap-2">
             <a
-              href="https://instagram.com"
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-ivory/80 hover:text-gold transition-colors text-sm"
@@ -550,20 +562,12 @@ function Footer() {
               Instagram →
             </a>
             <a
-              href="https://facebook.com"
+              href={FACEBOOK_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-ivory/80 hover:text-gold transition-colors text-sm"
             >
               Facebook →
-            </a>
-            <a
-              href="https://www.tiktok.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-ivory/80 hover:text-gold transition-colors text-sm"
-            >
-              TikTok →
             </a>
           </div>
         </div>
