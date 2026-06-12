@@ -113,10 +113,13 @@ function Nav() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-md border-b border-border/60">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-        <a href="#top" className="flex flex-col leading-none">
-          <span className="font-display text-xl tracking-wide">Royalty Beauty</span>
-          <span className="text-[0.6rem] tracking-[0.3em] uppercase text-gold mt-1">
-            by Ikonomaki
+        <a href="#top" className="flex items-center gap-3 leading-none">
+          <img src={logoAsset.url} alt="Royalty Beauty & More" className="h-12 w-12 rounded-full object-cover border border-gold/40" />
+          <span className="flex flex-col">
+            <span className="font-display text-xl tracking-wide">Royalty Beauty</span>
+            <span className="text-[0.6rem] tracking-[0.3em] uppercase text-gold mt-1">
+              by Ikonomaki
+            </span>
           </span>
         </a>
         <nav className="hidden md:flex items-center gap-10">
