@@ -184,7 +184,7 @@ function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 min-h-[calc(100vh-5rem)] flex flex-col justify-center py-20">
         <div className="max-w-3xl">
           <p className="flex items-center gap-4 text-gold text-[0.7rem] tracking-[0.35em] uppercase mb-8">
-            <span className="gold-rule" /> Boutique Hair Salon · Πόρτο Ράφτη
+            <span className="gold-rule" /> Hair Salon Boutique · Πόρτο Ράφτη
           </p>
           <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-8xl leading-[0.95] text-ivory font-light">
             Η Πολυτέλεια
