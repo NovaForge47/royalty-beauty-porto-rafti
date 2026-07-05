@@ -78,16 +78,16 @@ const HOURS = [
 
 const REVIEWS = [
   {
-    name: "Μαρία Κ.",
-    text: "Απίστευτη εμπειρία από την πρώτη στιγμή. Η Ικονομάκη κατάλαβε ακριβώς τι ήθελα και το αποτέλεσμα ξεπέρασε κάθε προσδοκία. Πραγματικά boutique αισθητική.",
+    name: "Cristina Gonzales",
+    text: "I highly recommend Royalty Beauty! From the moment I walked in, I was greeted warmly by Voula. She is not only incredibly professional but also has a fantastic eye for design. Instead of just giving me a cut, Voula designed a new hairstyle that is both younger and more stylish—I am genuinely thrilled with the results. Thank you, Voula, for making me feel great!",
   },
   {
-    name: "Ελένη Π.",
-    text: "Το πιο εκλεπτυσμένο κομμωτήριο στο Πόρτο Ράφτη. Λεπτομέρεια, πολυτέλεια, επαγγελματισμός — όλα σε άψογη ισορροπία. Δεν πηγαίνω πουθενά αλλού.",
+    name: "Eila Nadem",
+    text: "She is very friendly and her job it's very professional, I really like it, and I recommend you to go to her place and enjoy her service.",
   },
   {
-    name: "Σοφία Δ.",
-    text: "Έκανα ολικό makeover για τον γάμο μου. Νιώθω ότι μου χάρισαν μια καινούργια εκδοχή του εαυτού μου. Ευχαριστώ από καρδιάς.",
+    name: "Client Review",
+    text: "Voula is really good in giving you a perfect haircut according to your face cut. I like her work.",
   },
 ];
 
@@ -367,17 +367,6 @@ function Reviews() {
           <h2 className="font-display text-5xl lg:text-7xl font-light leading-[1]">
             Η εμπειρία <span className="italic text-gold">τους</span>
           </h2>
-          <div className="mt-10 inline-flex flex-col items-center gap-3">
-            <div className="flex items-center gap-4">
-              <span className="font-display text-5xl text-foreground">4.6</span>
-              <div className="flex flex-col items-start">
-                <Stars rating={4.6} />
-                <span className="text-[0.7rem] tracking-[0.25em] uppercase text-muted-foreground mt-1">
-                  Από 83 Google Reviews
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
