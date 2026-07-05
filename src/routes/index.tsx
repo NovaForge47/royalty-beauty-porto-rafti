@@ -367,17 +367,6 @@ function Reviews() {
           <h2 className="font-display text-5xl lg:text-7xl font-light leading-[1]">
             Η εμπειρία <span className="italic text-gold">τους</span>
           </h2>
-          <div className="mt-10 inline-flex flex-col items-center gap-3">
-            <div className="flex items-center gap-4">
-              <span className="font-display text-5xl text-foreground">4.6</span>
-              <div className="flex flex-col items-start">
-                <Stars rating={4.6} />
-                <span className="text-[0.7rem] tracking-[0.25em] uppercase text-muted-foreground mt-1">
-                  Από 83 Google Reviews
-                </span>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
