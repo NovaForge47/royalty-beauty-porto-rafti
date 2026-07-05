@@ -44,8 +44,8 @@
   /* Palette: strict black, white, gold */
   --ivory: oklch(0.985 0.003 90);
   --onyx: oklch(0.12 0 0);
-  --gold: oklch(0.78 0.12 85);
-  --gold-soft: oklch(0.88 0.06 90);
+  --gold: oklch(0.82 0.04 95);
+  --gold-soft: oklch(0.9 0.02 95);
 
   --background: var(--ivory);
   --foreground: var(--onyx);
