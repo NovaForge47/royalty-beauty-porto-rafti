@@ -342,7 +342,7 @@ function Booking() {
           </p>
         </div>
 
-        <CalendlyEmbed />
+        <BookingForm />
       </div>
     </section>
   );
