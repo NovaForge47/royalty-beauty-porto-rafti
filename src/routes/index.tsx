@@ -3,6 +3,9 @@ import { useState } from "react";
 import heroImg from "@/assets/hero.jpg";
 import aboutImg from "@/assets/about.jpg";
 import logoAsset from "@/assets/logo.png.asset.json";
+import voula1Asset from "@/assets/voula-1.jpg.asset.json";
+import voula2Asset from "@/assets/voula-2.jpg.asset.json";
+import voula3Asset from "@/assets/voula-3.jpg.asset.json";
 import { BookingForm } from "@/components/BookingForm";
 
 const INSTAGRAM_URL = "https://www.instagram.com/royaltybeautyandmore/";
@@ -67,7 +70,6 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       <Nav />
       <Hero />
-      <Marquee />
       <About />
       <Booking />
       <Reviews />
@@ -252,6 +254,19 @@ function About() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-20 lg:mt-28 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        {[voula1Asset, voula2Asset, voula3Asset].map((a, i) => (
+          <div key={i} className="relative aspect-[4/5] overflow-hidden group">
+            <img
+              src={a.url}
+              alt="Voula Ikonomaki at work"
+              loading="lazy"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-3 border border-gold/30 pointer-events-none" />
+          </div>
+        ))}
       </div>
     </section>
   );
