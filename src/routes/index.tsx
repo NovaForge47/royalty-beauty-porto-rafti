@@ -7,22 +7,22 @@ import { BookingForm } from "@/components/BookingForm";
 
 const INSTAGRAM_URL = "https://www.instagram.com/royaltybeautyandmore/";
 const FACEBOOK_URL = "https://www.facebook.com/Royaltybeautyandmore.gr";
-const ADDRESS = "37ο χλμ Λ. Μαρκοπούλου, Πόρτο Ράφτη";
+const ADDRESS = "37th km Markopoulou Ave., Porto Rafti";
 const MAPS_QUERY = encodeURIComponent("37ο χλμ Λεωφ. Μαρκοπούλου, Πόρτο Ράφτη");
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Royalty Beauty by Ikonomaki — Luxury Hair Salon Πόρτο Ράφτη" },
+      { title: "Royalty Beauty by Voula Ikonomaki — Luxury Hair Salon Porto Rafti" },
       {
         name: "description",
         content:
-          "Royalty Beauty by Ikonomaki — boutique κομμωτήριο πολυτελείας στο Πόρτο Ράφτη. Κουρέματα, hair makeover, extensions, makeup & eyelashes. Κλείστε online ραντεβού.",
+          "Royalty Beauty by Voula Ikonomaki — luxury boutique hair salon in Porto Rafti. Haircuts, hair makeover, extensions, makeup & eyelashes. Book online.",
       },
-      { property: "og:title", content: "Royalty Beauty by Ikonomaki" },
+      { property: "og:title", content: "Royalty Beauty by Voula Ikonomaki" },
       {
         property: "og:description",
-        content: "Boutique κομμωτήριο πολυτελείας στο Πόρτο Ράφτη. Η πολυτέλεια που σου αξίζει.",
+        content: "Luxury hair salon boutique in Porto Rafti. The luxury you deserve.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -31,49 +31,49 @@ export const Route = createFileRoute("/")({
 });
 
 const NAV = [
-  { href: "#services", label: "Υπηρεσίες" },
-  { href: "#about", label: "Σχετικά" },
-  { href: "#booking", label: "Ραντεβού" },
-  { href: "#reviews", label: "Κριτικές" },
-  { href: "#contact", label: "Επικοινωνία" },
+  { href: "#services", label: "Services" },
+  { href: "#about", label: "About" },
+  { href: "#booking", label: "Booking" },
+  { href: "#reviews", label: "Reviews" },
+  { href: "#contact", label: "Contact" },
 ];
 
 const SERVICES = [
   {
     n: "01",
-    title: "Κούρεμα",
-    desc: "Σχεδιάζουμε τη γραμμή σου με χειρουργική ακρίβεια — κάθε κούρεμα είναι μια ιδιωτική συνεδρία αισθητικής, προσαρμοσμένη στα χαρακτηριστικά και τον χαρακτήρα σου.",
+    title: "Haircut",
+    desc: "We shape your silhouette with surgical precision — every cut is a private aesthetic session, tailored to your features and personality.",
   },
   {
     n: "02",
     title: "Hair Makeover",
-    desc: "Μια ολοκληρωμένη μεταμόρφωση — χρώμα, υφή και τεχνική σε απόλυτη αρμονία. Για όταν επιλέγεις να ξαναγραφτείς από την αρχή, με αψεγάδιαστη φινέτσα.",
+    desc: "A complete transformation — colour, texture and technique in perfect harmony. For when you choose to be rewritten from scratch, with flawless finesse.",
   },
   {
     n: "03",
     title: "Hair Extensions",
-    desc: "Premium φυσικές τρίχες υψηλής ποιότητας, τοποθετημένες αόρατα. Όγκος, μήκος και λάμψη που μοιάζουν φυσικά δικά σου — γιατί απλώς είναι.",
+    desc: "Premium natural hair of the highest quality, invisibly applied. Volume, length and shine that feel naturally your own — because they simply are.",
   },
   {
     n: "04",
     title: "Makeup",
-    desc: "Editorial αισθητική με δερματική υφή. Κάθε look σχεδιάζεται για τη στιγμή σου — γάμος, εκδήλωση ή μια βραδιά που αξίζει να θυμάσαι.",
+    desc: "Editorial aesthetic with skin-first texture. Every look is designed for your moment — weddings, events, or an evening worth remembering.",
   },
   {
     n: "05",
     title: "Eyelashes",
-    desc: "Βλεφαρίδες με αρχιτεκτονική προσοχή — από φυσική επιμήκυνση έως volume drama. Άνεση, διάρκεια και η πιο εκλεπτυσμένη γραμμή του βλέμματος.",
+    desc: "Lashes with architectural attention — from natural extension to volume drama. Comfort, longevity and the most refined line of the eye.",
   },
 ];
 
 const HOURS = [
-  { d: "Δευτέρα", h: "Κλειστά", closed: true },
-  { d: "Τρίτη", h: "11:00 — 19:00" },
-  { d: "Τετάρτη", h: "11:00 — 19:00" },
-  { d: "Πέμπτη", h: "11:00 — 19:00" },
-  { d: "Παρασκευή", h: "11:00 — 19:00" },
-  { d: "Σάββατο", h: "11:00 — 18:00" },
-  { d: "Κυριακή", h: "Κλειστά", closed: true },
+  { d: "Monday", h: "Closed", closed: true },
+  { d: "Tuesday", h: "11:00 — 19:00" },
+  { d: "Wednesday", h: "11:00 — 19:00" },
+  { d: "Thursday", h: "11:00 — 19:00" },
+  { d: "Friday", h: "11:00 — 19:00" },
+  { d: "Saturday", h: "11:00 — 18:00" },
+  { d: "Sunday", h: "Closed", closed: true },
 ];
 
 const REVIEWS = [
@@ -118,7 +118,7 @@ function Nav() {
           <span className="flex flex-col">
             <span className="font-display text-xl tracking-wide">Royalty Beauty</span>
             <span className="text-[0.6rem] tracking-[0.3em] uppercase text-gold mt-1">
-              by Ikonomaki
+              by Voula Ikonomaki
             </span>
           </span>
         </a>
@@ -134,7 +134,7 @@ function Nav() {
           ))}
         </nav>
         <a href="#booking" className="hidden md:inline-flex btn-gold !py-3 !px-6 !text-[0.65rem]">
-          Κλείσε Ραντεβού
+          Book Now
         </a>
         <button
           aria-label="Menu"
@@ -158,7 +158,7 @@ function Nav() {
               </a>
             ))}
             <a href="#booking" onClick={() => setOpen(false)} className="btn-gold mt-2">
-              Κλείσε Ραντεβού
+              Book Now
             </a>
           </div>
         </div>
@@ -184,23 +184,23 @@ function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 min-h-[calc(100vh-5rem)] flex flex-col justify-center py-20">
         <div className="max-w-3xl">
           <p className="flex items-center gap-4 text-gold text-[0.7rem] tracking-[0.35em] uppercase mb-8">
-            <span className="gold-rule" /> Hair Salon Boutique · Πόρτο Ράφτη
+            <span className="gold-rule" /> Hair Salon Boutique · Porto Rafti
           </p>
           <h1 className="font-display text-[2.75rem] sm:text-6xl lg:text-8xl leading-[0.95] text-ivory font-light">
-            Η Πολυτέλεια
+            The Luxury
             <br />
-            <span className="italic text-gold">που Σου Αξίζει</span>
+            <span className="italic text-gold">You Deserve</span>
           </h1>
           <p className="mt-10 text-base lg:text-lg text-ivory/70 max-w-xl leading-relaxed font-light">
-            Ένα ιδιωτικό καταφύγιο ομορφιάς, όπου κάθε λεπτομέρεια έχει σχεδιαστεί για να σε
-            αναδείξει. Καλώς ήρθες στο Royalty Beauty by Ikonomaki.
+            A private sanctuary of beauty, where every detail has been designed to bring out the
+            best in you. Welcome to Royalty Beauty by Voula Ikonomaki.
           </p>
           <div className="mt-12 flex flex-wrap gap-4">
             <a href="#booking" className="btn-gold">
               Online Booking
             </a>
             <a href="#services" className="btn-outline-gold">
-              Οι Υπηρεσίες μας
+              Our Services
             </a>
           </div>
         </div>
@@ -215,7 +215,7 @@ function Hero() {
 }
 
 function Marquee() {
-  const items = ["Κούρεμα", "Hair Makeover", "Extensions", "Makeup", "Eyelashes", "Bridal"];
+  const items = ["Haircut", "Hair Makeover", "Extensions", "Makeup", "Eyelashes", "Bridal"];
   return (
     <div className="bg-onyx text-ivory border-y border-gold/30 py-6 overflow-hidden">
       <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-3 px-6 text-[0.7rem] tracking-[0.4em] uppercase text-ivory/70">
@@ -236,15 +236,15 @@ function Services() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-16 mb-20">
           <div className="lg:col-span-5">
-            <p className="eyebrow mb-6">— Υπηρεσίες</p>
+            <p className="eyebrow mb-6">— Services</p>
             <h2 className="font-display text-5xl lg:text-7xl leading-[1] font-light">
-              Τέχνη στα <span className="italic text-gold">μαλλιά</span> & την ομορφιά
+              The art of <span className="italic text-gold">hair</span> & beauty
             </h2>
           </div>
           <div className="lg:col-span-6 lg:col-start-7 flex items-end">
             <p className="text-muted-foreground leading-relaxed text-lg">
-              Πέντε εξειδικευμένες υπηρεσίες, σχεδιασμένες με τη φιλοσοφία ενός boutique atelier.
-              Κάθε επίσκεψη είναι μια προσωπική εμπειρία ευεξίας και αισθητικής υπεροχής.
+              Five specialised services, designed with the philosophy of a boutique atelier.
+              Every visit is a personal experience of wellbeing and aesthetic excellence.
             </p>
           </div>
         </div>
@@ -289,30 +289,30 @@ function About() {
           <div className="absolute inset-4 border border-gold/40 pointer-events-none" />
         </div>
         <div>
-          <p className="eyebrow mb-6">— Σχετικά με εμάς</p>
+          <p className="eyebrow mb-6">— About us</p>
           <h2 className="font-display text-5xl lg:text-6xl leading-[1.05] font-light">
-            Ένα boutique καταφύγιο <span className="italic text-gold">πολυτέλειας</span>.
+            A boutique sanctuary of <span className="italic text-gold">luxury</span>.
           </h2>
           <div className="mt-10 space-y-6 text-ivory/75 leading-relaxed text-[1.05rem]">
             <p>
-              Το Royalty Beauty by Ikonomaki γεννήθηκε από την πεποίθηση ότι η ομορφιά είναι τέχνη
-              — και κάθε γυναίκα αξίζει να βιώσει την δική της προσωπική στιγμή πολυτέλειας, μακριά
-              από τη βιασύνη της καθημερινότητας.
+              Royalty Beauty by Voula Ikonomaki was born from the belief that beauty is an art —
+              and every woman deserves to experience her own personal moment of luxury, away from
+              the rush of everyday life.
             </p>
             <p>
-              Στον φιλόξενο, low-lit χώρο μας στο Πόρτο Ράφτη, συνδυάζουμε τεχνική κατάρτιση σε
-              διεθνές επίπεδο με προϊόντα premium οίκων, για ένα αποτέλεσμα που σε ακολουθεί πολύ
-              μετά το πέρας της συνεδρίας.
+              With 37 years of experience, our welcoming, low-lit space in Porto Rafti combines
+              internationally-trained technique with premium products, for a result that stays
+              with you long after your session ends.
             </p>
             <p>
-              Λίγες θέσεις. Πολύς χρόνος ανά πελάτισσα. Ολοκληρωτική προσοχή στη λεπτομέρεια.
+              A few seats. Plenty of time per client. Complete attention to detail.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-3 gap-8 border-t border-gold/30 pt-10">
             {[
-              ["10+", "Χρόνια εμπειρίας"],
+              ["37", "Years of experience"],
               ["4.6★", "Google Reviews"],
-              ["100%", "Premium προϊόντα"],
+              ["100%", "Premium products"],
             ].map(([k, v]) => (
               <div key={k}>
                 <div className="font-display text-4xl text-gold">{k}</div>
@@ -335,10 +335,10 @@ function Booking() {
         <div className="text-center mb-16">
           <p className="eyebrow mb-6">— Online Booking</p>
           <h2 className="font-display text-5xl lg:text-7xl font-light leading-[1]">
-            Κλείσε το <span className="italic text-gold">ραντεβού</span> σου
+            Book your <span className="italic text-gold">appointment</span>
           </h2>
           <p className="mt-8 text-muted-foreground max-w-xl mx-auto">
-            Επίλεξε ημέρα και ώρα που σε εξυπηρετεί — η κράτησή σου επιβεβαιώνεται αυτόματα.
+            Pick a day and time that works for you — your booking is confirmed instantly.
           </p>
         </div>
 
@@ -363,9 +363,9 @@ function Reviews() {
     <section id="reviews" className="py-28 lg:py-40 bg-secondary">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
-          <p className="eyebrow mb-6">— Κριτικές</p>
+          <p className="eyebrow mb-6">— Reviews</p>
           <h2 className="font-display text-5xl lg:text-7xl font-light leading-[1]">
-            Η εμπειρία <span className="italic text-gold">τους</span>
+            Their <span className="italic text-gold">experience</span>
           </h2>
         </div>
 
@@ -394,9 +394,9 @@ function Hours() {
   return (
     <section className="py-28 lg:py-40 bg-background">
       <div className="max-w-5xl mx-auto px-6 lg:px-12 text-center">
-        <p className="eyebrow mb-6">— Ωράριο Λειτουργίας</p>
+        <p className="eyebrow mb-6">— Opening Hours</p>
         <h2 className="font-display text-5xl lg:text-6xl font-light leading-[1]">
-          Σε <span className="italic text-gold">περιμένουμε</span>
+          We're <span className="italic text-gold">waiting</span> for you
         </h2>
         <div className="mt-16 max-w-2xl mx-auto divide-y divide-border border-y border-border">
           {HOURS.map((h) => (
@@ -429,18 +429,18 @@ function Contact() {
     <section id="contact" className="bg-onyx text-ivory">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-28 lg:py-40 grid lg:grid-cols-2 gap-16 items-start">
         <div>
-          <p className="eyebrow mb-6">— Επικοινωνία</p>
+          <p className="eyebrow mb-6">— Contact</p>
           <h2 className="font-display text-5xl lg:text-7xl font-light leading-[1]">
-            Έλα να <span className="italic text-gold">γνωριστούμε</span>.
+            Come and <span className="italic text-gold">meet us</span>.
           </h2>
           <p className="mt-8 text-ivory/70 max-w-md leading-relaxed">
-            Για ραντεβού, ερωτήσεις ή ιδιωτικές συνεδρίες — είμαστε στη διάθεσή σου.
+            For appointments, questions or private sessions — we're here for you.
           </p>
 
           <div className="mt-12 space-y-8">
             <div>
               <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold mb-2">
-                Τηλέφωνο
+                Phone
               </div>
               <a
                 href="tel:+302299074486"
@@ -451,7 +451,7 @@ function Contact() {
             </div>
             <div>
               <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold mb-2">
-                Διεύθυνση
+                Address
               </div>
               <a
                 href={`https://www.google.com/maps?q=${MAPS_QUERY}`}
@@ -459,7 +459,7 @@ function Contact() {
               >
                 {ADDRESS}
                 <br />
-                Αθήνα, Ελλάδα
+                Athens, Greece
               </a>
             </div>
             <div>
@@ -487,7 +487,7 @@ function Contact() {
 
         <div className="relative aspect-square w-full border border-gold/40 overflow-hidden">
           <iframe
-            title="Royalty Beauty & More — Πόρτο Ράφτη"
+            title="Royalty Beauty & More — Porto Rafti"
             src={`https://www.google.com/maps?q=${MAPS_QUERY}&output=embed`}
             className="w-full h-full grayscale contrast-125"
             loading="lazy"
@@ -509,16 +509,16 @@ function Footer() {
             <div>
               <div className="font-display text-2xl">Royalty Beauty</div>
               <div className="text-[0.6rem] tracking-[0.3em] uppercase text-gold mt-1">
-                by Ikonomaki
+                by Voula Ikonomaki
               </div>
             </div>
           </div>
           <p className="mt-6 text-ivory/60 text-sm leading-relaxed max-w-xs">
-            Boutique κομμωτήριο πολυτελείας στο Πόρτο Ράφτη.
+            Luxury hair salon boutique in Porto Rafti.
           </p>
         </div>
         <div>
-          <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold mb-4">Επικοινωνία</div>
+          <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold mb-4">Contact</div>
           <a
             href="tel:+302299074486"
             className="block text-ivory/80 hover:text-gold transition-colors"
@@ -533,7 +533,7 @@ function Footer() {
           </a>
         </div>
         <div>
-          <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold mb-4">Ακολούθησέ μας</div>
+          <div className="text-[0.65rem] tracking-[0.3em] uppercase text-gold mb-4">Follow us</div>
           <div className="flex flex-col gap-2">
             <a
               href={INSTAGRAM_URL}
@@ -553,7 +553,7 @@ function Footer() {
       </div>
       <div className="border-t border-ivory/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex flex-col md:flex-row justify-between gap-3 text-[0.7rem] tracking-[0.25em] uppercase text-ivory/50">
-          <span>© {new Date().getFullYear()} Royalty Beauty by Ikonomaki</span>
+          <span>© {new Date().getFullYear()} Royalty Beauty by Voula Ikonomaki</span>
           <span>Designed by Nexus Media</span>
         </div>
       </div>
