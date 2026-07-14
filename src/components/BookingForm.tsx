@@ -11,16 +11,6 @@ export function BookingForm() {
           loading="lazy"
         />
       </div>
-      <div className="mt-6 flex justify-center">
-        <a
-          href={SETMORE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-gold"
-        >
-          Open Booking in New Tab
-        </a>
-      </div>
     </div>
   );
 }

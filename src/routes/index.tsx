@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Royalty Beauty by Voula Ikonomaki — luxury boutique hair salon in Porto Rafti. Haircuts, hair makeover, extensions, makeup & eyelashes. Book online.",
+          "Royalty Beauty by Voula Ikonomaki — luxury hair salon boutique in Porto Rafti. Award-winning hairdresser with 37 years of international experience. Book online.",
       },
       { property: "og:title", content: "Royalty Beauty by Voula Ikonomaki" },
       {
@@ -31,39 +31,10 @@ export const Route = createFileRoute("/")({
 });
 
 const NAV = [
-  { href: "#services", label: "Services" },
   { href: "#about", label: "About" },
   { href: "#booking", label: "Booking" },
   { href: "#reviews", label: "Reviews" },
   { href: "#contact", label: "Contact" },
-];
-
-const SERVICES = [
-  {
-    n: "01",
-    title: "Haircut",
-    desc: "We shape your silhouette with surgical precision — every cut is a private aesthetic session, tailored to your features and personality.",
-  },
-  {
-    n: "02",
-    title: "Hair Makeover",
-    desc: "A complete transformation — colour, texture and technique in perfect harmony. For when you choose to be rewritten from scratch, with flawless finesse.",
-  },
-  {
-    n: "03",
-    title: "Hair Extensions",
-    desc: "Premium natural hair of the highest quality, invisibly applied. Volume, length and shine that feel naturally your own — because they simply are.",
-  },
-  {
-    n: "04",
-    title: "Makeup",
-    desc: "Editorial aesthetic with skin-first texture. Every look is designed for your moment — weddings, events, or an evening worth remembering.",
-  },
-  {
-    n: "05",
-    title: "Eyelashes",
-    desc: "Lashes with architectural attention — from natural extension to volume drama. Comfort, longevity and the most refined line of the eye.",
-  },
 ];
 
 const HOURS = [
@@ -97,7 +68,6 @@ function Index() {
       <Nav />
       <Hero />
       <Marquee />
-      <Services />
       <About />
       <Booking />
       <Reviews />
@@ -117,7 +87,7 @@ function Nav() {
           <img src={logoAsset.url} alt="Royalty Beauty & More" className="h-16 w-16 md:h-20 md:w-20 rounded-full object-cover border border-gold/40" />
           <span className="flex flex-col">
             <span className="font-display text-xl tracking-wide">Royalty Beauty</span>
-            <span className="text-[0.6rem] tracking-[0.3em] uppercase text-gold mt-1">
+            <span className="text-[0.6rem] tracking-[0.3em] uppercase text-black mt-1">
               by Voula Ikonomaki
             </span>
           </span>
@@ -199,8 +169,8 @@ function Hero() {
             <a href="#booking" className="btn-gold">
               Online Booking
             </a>
-            <a href="#services" className="btn-outline-gold">
-              Our Services
+            <a href="#about" className="btn-outline-gold">
+              About Voula
             </a>
           </div>
         </div>
@@ -215,7 +185,7 @@ function Hero() {
 }
 
 function Marquee() {
-  const items = ["Haircut", "Hair Makeover", "Extensions", "Makeup", "Eyelashes", "Bridal"];
+  const items = ["Luxury", "Red Carpet", "Bridal", "Fashion", "Art", "Beauty"];
   return (
     <div className="bg-onyx text-ivory border-y border-gold/30 py-6 overflow-hidden">
       <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-3 px-6 text-[0.7rem] tracking-[0.4em] uppercase text-ivory/70">
@@ -227,49 +197,6 @@ function Marquee() {
         ))}
       </div>
     </div>
-  );
-}
-
-function Services() {
-  return (
-    <section id="services" className="py-28 lg:py-40 bg-background">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-12 gap-16 mb-20">
-          <div className="lg:col-span-5">
-            <p className="eyebrow mb-6">— Services</p>
-            <h2 className="font-display text-5xl lg:text-7xl leading-[1] font-light">
-              The art of <span className="italic text-gold">hair</span> & beauty
-            </h2>
-          </div>
-          <div className="lg:col-span-6 lg:col-start-7 flex items-end">
-            <p className="text-muted-foreground leading-relaxed text-lg">
-              Five specialised services, designed with the philosophy of a boutique atelier.
-              Every visit is a personal experience of wellbeing and aesthetic excellence.
-            </p>
-          </div>
-        </div>
-
-        <div className="border-t border-border">
-          {SERVICES.map((s) => (
-            <article
-              key={s.n}
-              className="group grid lg:grid-cols-12 gap-6 lg:gap-12 py-12 border-b border-border hover:bg-secondary/40 transition-colors px-2"
-            >
-              <div className="lg:col-span-1 text-gold font-display text-2xl">{s.n}</div>
-              <h3 className="lg:col-span-3 font-display text-3xl lg:text-4xl font-light">
-                {s.title}
-              </h3>
-              <p className="lg:col-span-7 text-muted-foreground leading-relaxed text-[1.05rem]">
-                {s.desc}
-              </p>
-              <div className="lg:col-span-1 flex lg:justify-end items-start text-gold opacity-0 group-hover:opacity-100 transition-opacity">
-                <span className="text-2xl">→</span>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
   );
 }
 
@@ -289,30 +216,32 @@ function About() {
           <div className="absolute inset-4 border border-gold/40 pointer-events-none" />
         </div>
         <div>
-          <p className="eyebrow mb-6">— About us</p>
+          <p className="eyebrow mb-6">— About Voula</p>
           <h2 className="font-display text-5xl lg:text-6xl leading-[1.05] font-light">
-            A boutique sanctuary of <span className="italic text-gold">luxury</span>.
+            About <span className="italic text-gold">Voula Ikonomaki</span>
           </h2>
           <div className="mt-10 space-y-6 text-ivory/75 leading-relaxed text-[1.05rem]">
             <p>
-              Royalty Beauty by Voula Ikonomaki was born from the belief that beauty is an art —
-              and every woman deserves to experience her own personal moment of luxury, away from
-              the rush of everyday life.
+              The CEO owner of Royalty Beauty is Voula Ikonomaki, an award-winning hairdresser with
+              37 years of experience. She has built an international career on the world’s most
+              prestigious catwalks and fashion shows, sharing the stage with celebrated designers
+              such as Oscar de la Renta, Chanel, Dior, Versace and leading international creative teams.
             </p>
             <p>
-              With 37 years of experience, our welcoming, low-lit space in Porto Rafti combines
-              internationally-trained technique with premium products, for a result that stays
-              with you long after your session ends.
+              For 37 years, Voula has worked as a L’Oréal hair educator and show performer, a journey
+              that deepened her love for art, beauty and fashion. Her vision is simple: every woman
+              should be dressed as a queen, from head to toe.
             </p>
             <p>
-              A few seats. Plenty of time per client. Complete attention to detail.
+              Royalty Beauty is an exceptional concept of multicultural design with the heart beating
+              between Greece and the UAE. It is a destination for red-carpet women, every day.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-3 gap-8 border-t border-gold/30 pt-10">
             {[
               ["37", "Years of experience"],
-              ["4.6★", "Google Reviews"],
-              ["100%", "Premium products"],
+              ["Awarded", "Bridal & Gala expert"],
+              ["L’Oréal", "Hair educator"],
             ].map(([k, v]) => (
               <div key={k}>
                 <div className="font-display text-4xl text-gold">{k}</div>
@@ -508,7 +437,7 @@ function Footer() {
             <img src={logoAsset.url} alt="Royalty Beauty & More" className="h-12 w-12 rounded-full object-cover border border-gold/40" />
             <div>
               <div className="font-display text-2xl">Royalty Beauty</div>
-              <div className="text-[0.6rem] tracking-[0.3em] uppercase text-gold mt-1">
+              <div className="text-[0.6rem] tracking-[0.3em] uppercase text-ivory mt-1">
                 by Voula Ikonomaki
               </div>
             </div>
