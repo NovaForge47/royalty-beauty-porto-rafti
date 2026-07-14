@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroImg from "@/assets/hero.jpg";
-import aboutImg from "@/assets/about.jpg";
+
 import logoAsset from "@/assets/logo.png.asset.json";
 import voula1Asset from "@/assets/voula-1.jpg.asset.json";
 import voula2Asset from "@/assets/voula-2.jpg.asset.json";
@@ -205,54 +205,41 @@ function Marquee() {
 function About() {
   return (
     <section id="about" className="py-28 lg:py-40 bg-onyx text-ivory">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-        <div className="relative aspect-[4/5] overflow-hidden">
-          <img
-            src={aboutImg}
-            alt="Royalty Beauty atelier"
-            loading="lazy"
-            width={1400}
-            height={1600}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-4 border border-gold/40 pointer-events-none" />
+      <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+        <p className="eyebrow mb-6">— About Voula</p>
+        <h2 className="font-display text-5xl lg:text-6xl leading-[1.05] font-light">
+          About <span className="italic text-gold">Voula Ikonomaki</span>
+        </h2>
+        <div className="mt-10 space-y-6 text-ivory/75 leading-relaxed text-[1.05rem]">
+          <p>
+            The CEO owner of Royalty Beauty is Voula Ikonomaki, an award-winning hairdresser with
+            37 years of experience. She has built an international career on the world’s most
+            prestigious catwalks and fashion shows, sharing the stage with celebrated designers
+            such as Oscar de la Renta, Chanel, Dior, Versace and leading international creative teams.
+          </p>
+          <p>
+            For 37 years, Voula has worked as a L’Oréal hair educator and show performer, a journey
+            that deepened her love for art, beauty and fashion. Her vision is simple: every woman
+            should be dressed as a queen, from head to toe.
+          </p>
+          <p>
+            Royalty Beauty is an exceptional concept of multicultural design with the heart beating
+            between Greece and the UAE. It is a destination for red-carpet women, every day.
+          </p>
         </div>
-        <div>
-          <p className="eyebrow mb-6">— About Voula</p>
-          <h2 className="font-display text-5xl lg:text-6xl leading-[1.05] font-light">
-            About <span className="italic text-gold">Voula Ikonomaki</span>
-          </h2>
-          <div className="mt-10 space-y-6 text-ivory/75 leading-relaxed text-[1.05rem]">
-            <p>
-              The CEO owner of Royalty Beauty is Voula Ikonomaki, an award-winning hairdresser with
-              37 years of experience. She has built an international career on the world’s most
-              prestigious catwalks and fashion shows, sharing the stage with celebrated designers
-              such as Oscar de la Renta, Chanel, Dior, Versace and leading international creative teams.
-            </p>
-            <p>
-              For 37 years, Voula has worked as a L’Oréal hair educator and show performer, a journey
-              that deepened her love for art, beauty and fashion. Her vision is simple: every woman
-              should be dressed as a queen, from head to toe.
-            </p>
-            <p>
-              Royalty Beauty is an exceptional concept of multicultural design with the heart beating
-              between Greece and the UAE. It is a destination for red-carpet women, every day.
-            </p>
-          </div>
-          <div className="mt-12 grid grid-cols-3 gap-8 border-t border-gold/30 pt-10">
-            {[
-              ["37", "Years of experience"],
-              ["Awarded", "Bridal & Gala expert"],
-              ["L’Oréal", "Hair educator"],
-            ].map(([k, v]) => (
-              <div key={k}>
-                <div className="font-display text-4xl text-gold">{k}</div>
-                <div className="text-[0.7rem] tracking-[0.25em] uppercase text-ivory/60 mt-2">
-                  {v}
-                </div>
+        <div className="mt-12 grid grid-cols-3 gap-8 border-t border-gold/30 pt-10">
+          {[
+            ["37", "Years of experience"],
+            ["Awarded", "Bridal & Gala expert"],
+            ["L’Oréal", "Hair educator"],
+          ].map(([k, v]) => (
+            <div key={k}>
+              <div className="font-display text-4xl text-gold">{k}</div>
+              <div className="text-[0.7rem] tracking-[0.25em] uppercase text-ivory/60 mt-2">
+                {v}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-20 lg:mt-28 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
