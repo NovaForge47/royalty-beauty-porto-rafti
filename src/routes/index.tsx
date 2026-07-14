@@ -255,6 +255,19 @@ function About() {
           </div>
         </div>
       </div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-20 lg:mt-28 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        {[voula1Asset, voula2Asset, voula3Asset].map((a, i) => (
+          <div key={i} className="relative aspect-[4/5] overflow-hidden group">
+            <img
+              src={a.url}
+              alt="Voula Ikonomaki at work"
+              loading="lazy"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-3 border border-gold/30 pointer-events-none" />
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
