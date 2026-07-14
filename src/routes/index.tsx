@@ -3,6 +3,9 @@ import { useState } from "react";
 import heroImg from "@/assets/hero.jpg";
 import aboutImg from "@/assets/about.jpg";
 import logoAsset from "@/assets/logo.png.asset.json";
+import voula1Asset from "@/assets/voula-1.jpg.asset.json";
+import voula2Asset from "@/assets/voula-2.jpg.asset.json";
+import voula3Asset from "@/assets/voula-3.jpg.asset.json";
 import { BookingForm } from "@/components/BookingForm";
 
 const INSTAGRAM_URL = "https://www.instagram.com/royaltybeautyandmore/";
