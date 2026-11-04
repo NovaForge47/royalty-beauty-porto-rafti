@@ -227,6 +227,16 @@ function About() {
             between Greece and the UAE. It is a destination for red-carpet women, every day.
           </p>
         </div>
+        <div className="mt-12 border border-gold/40 px-8 py-8">
+          <p className="eyebrow mb-3">— Exclusive</p>
+          <h3 className="font-display text-3xl lg:text-4xl font-light">
+            VIP <span className="italic text-gold">One-to-One</span> Service
+          </h3>
+          <p className="mt-4 text-ivory/75 leading-relaxed">
+            Enjoy a fully private experience with Voula's undivided attention, from consultation
+            to the final touch.
+          </p>
+        </div>
         <div className="mt-12 grid grid-cols-3 gap-8 border-t border-gold/30 pt-10">
           {[
             ["37", "Years of experience"],
