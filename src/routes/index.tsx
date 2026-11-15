@@ -2,10 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroImg from "@/assets/hero.jpg";
 
-import logoAsset from "@/assets/logo.png.asset.json";
-import voula1Asset from "@/assets/voula-1.jpg.asset.json";
-import voula2Asset from "@/assets/voula-2.jpg.asset.json";
-import voula3Asset from "@/assets/voula-3.jpg.asset.json";
+const logoAsset = { url: "/images/logo.png" };
+const voula1Asset = { url: "/images/voula-1.jpg" };
+const voula2Asset = { url: "/images/voula-2.jpg" };
+const voula3Asset = { url: "/images/voula-3.jpg" };
 import { BookingForm } from "@/components/BookingForm";
 
 const INSTAGRAM_URL = "https://www.instagram.com/royaltybeautyandmore/";
@@ -28,6 +28,7 @@ export const Route = createFileRoute("/")({
         content: "Luxury hair salon boutique in Porto Rafti. The luxury you deserve.",
       },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
